@@ -1,0 +1,58 @@
+/* game board table */
+body{
+    background-color:rgba(0,0,0, .9);
+}
+
+#game {
+    margin-left:  15rem;
+    margin-top: 2rem;
+   }
+#board td {
+    
+    width: 80px;
+    height: 80px;
+    border: solid 1px white;
+    border-radius: 5px;
+    background-color:white;
+  }
+  
+  /* pieces are div within game table cells: draw as colored circles */
+  
+
+
+
+.piece {
+    margin: 5px;
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+  }
+  
+  .piece.p1 {
+    background-image:url(https://studio.code.org/v3/assets/qOrtceIfe4F4g3q5NDoLfm0GYaN2iuIJL0rN4cA_-hY/red.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .piece.p2 {
+    background-image:url(https://studio.code.org/v3/assets/qOrtceIfe4F4g3q5NDoLfm0GYaN2iuIJL0rN4cA_-hY/black.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  /* column-top is table row of clickable areas for each column */
+  
+  #column-top td {
+    border: dashed 1px white;
+  }
+  
+  #column-top td:hover {
+    background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCwe7cP_kFib5Aye4Sf2p1EjSh7oqbdWjNbAo4daIe1FCGgqip15bdkpo4fp1RhjLsJt0&usqp=CAU);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+  }
+  
