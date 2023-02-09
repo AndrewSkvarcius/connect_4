@@ -47,13 +47,14 @@ const findSpotForCol = x => {
       if (!board[y][x]) {
         return y;
       }
-    }
+    
     return null;
 }
 function placeInTable(y, x) {
     const piece = document.createElement('div');
     piece.classList.add('piece');
     piece.classList.add(`p${currPlayer}`);
+    console.log(currPlayer);
     piece.style.top = -50 * (y + 2);
   
     const spot = document.getElementById(`${y}-${x}`);
@@ -67,33 +68,6 @@ function placeInTable(y, x) {
   
   // handleClick: handle click of column top to play piece */
   
-  function handleClick(evt) {
-    // get x from ID of clicked cell
-    const x = +evt.target.id;
-  
-    // get next spot in column (if none, ignore click)
-    const y = findSpotForCol(x);
-    if (y === null) {
-      return;
-    }
-  
-    // place piece in board and add to HTML table
-    board[y][x] = currPlayer;
-    placeInTable(y, x);
-  
-    // check for win
-    if (checkForWin()) {
-      return endGame(`Player ${currPlayer} Won!`);
-    }
-  
-    // check for tie
-    if (board.every(row => row.every(cell => cell))) {
-      return endGame('Tie!');
-    }
-      
-    // switch players
-    currPlayer = currPlayer === 1 ? 2 : 1;
-  }
   
   /** checkForWin: check board cell-by-cell for "does a win start here?" */
   
@@ -129,7 +103,6 @@ function placeInTable(y, x) {
       }
     }
   }
-  
+} 
   makeBoard();
   makeHtmlBoard();
-  

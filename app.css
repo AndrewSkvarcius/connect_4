@@ -2,13 +2,10 @@
 body{
     background-color:rgba(0,0,0, .9);
 }
-
 #game {
-    margin-left:  15rem;
-    margin-top: 2rem;
-   }
+  margin-left: 15rem;
+}
 #board td {
-    
     width: 80px;
     height: 80px;
     border: solid 1px white;
@@ -22,7 +19,7 @@ body{
 
 
 .piece {
-    margin: 5px;
+    margin: 10px;
     width: 80%;
     height: 80%;
     border-radius: 50%;
@@ -55,4 +52,12 @@ body{
     background-size: cover;
    
   }
-  
+
+#p1-color{
+  margin-left: 15rem;
+  flex-wrap: wrap;
+}
+button.startBtn {
+  color: green;
+
+}
